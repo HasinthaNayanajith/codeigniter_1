@@ -39,7 +39,7 @@ if (!($this->session->userdata('loggedIn'))) {
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="<?php echo base_url('index.php/Book/index'); ?>">Library Books</a></li>
 								<li><a class="dropdown-item" href="<?php echo base_url('index.php/Book/add_new'); ?>">Add New Books</a></li>
-								<li><a class="dropdown-item" href="#">Issue Books</a></li>
+								<li><a class="dropdown-item" href="<?php echo base_url('index.php/Book/issue_book'); ?>">Issue Books</a></li>
 								<li><a class="dropdown-item" href="#">Return Books</a></li>
 							</ul>
 						</span>

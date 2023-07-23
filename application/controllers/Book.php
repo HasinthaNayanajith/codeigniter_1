@@ -14,6 +14,11 @@ class Book extends CI_Controller
 		$this->load->view('admin/add_new_book');
 	}
 
+	public function issue_book()
+	{
+		$this->load->view('admin/issue_book');
+	}
+
 
 	/***** FUNCTIONS *****/
 	public function addNewBook()
@@ -23,6 +28,37 @@ class Book extends CI_Controller
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('author', 'Author', 'required');
 		$this->form_validation->set_rules('rack', 'Rack Number', 'required');
+		$this->form_validation->set_rules('edition', 'Edition', 'required');
+		$this->form_validation->set_rules('regDate', 'Register Date', 'required');
+
+		if ($this->form_validation->run() == FALSE) {
+
+			$this->load->view('admin/add_new_book');
+		} else {
+
+			$this->load->model('_Book');
+			$result = $this->_Book->add();
+
+			if (!$result) {
+
+				/***** FAILED *****/
+				$this->session->set_flashdata('errmsg', 'Something went wrong.');
+				$this->add_new();
+			} else {
+
+				/***** SUCCEEDED. *****/
+				$this->index();
+			}
+		}
+	}
+
+
+	/***** ISSUE BOOKS *****/
+	public function issueBook()
+	{
+		/****** FORM VALIDATION ******/
+		$this->form_validation->set_rules('isbn', 'ISBN', 'required|is_unique[books.isbn]');
+		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('edition', 'Edition', 'required');
 		$this->form_validation->set_rules('regDate', 'Register Date', 'required');
 

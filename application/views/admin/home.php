@@ -7,7 +7,7 @@ include("includes/header.php");
 	<div class="container pt-5">
 		<div class="row">
 			<div class="col-sm-12 col-md-3 mt-sm-2">
-				<div class="home-card bg-light text-dark shadow-sm">
+				<div class="home-card bg-dark text-light shadow-sm">
 					<div class="d-flex flex-column">
 						<span class="card-title">Number of Books</span>
 						<span class="card-text mt-1">25</span>
@@ -15,7 +15,7 @@ include("includes/header.php");
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-3 mt-sm-2">
-				<div class="home-card bg-light text-dark shadow-sm">
+				<div class="home-card bg-dark text-light shadow-sm">
 					<div class="d-flex flex-column">
 						<span class="card-title">Number of Members</span>
 						<span class="card-text mt-1">25</span>
@@ -23,7 +23,7 @@ include("includes/header.php");
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-3 mt-sm-2">
-				<div class="home-card bg-light text-dark shadow-sm">
+				<div class="home-card bg-dark text-light shadow-sm">
 					<div class="d-flex flex-column">
 						<span class="card-title">Number of Issued Books</span>
 						<span class="card-text mt-1">25</span>
@@ -31,7 +31,7 @@ include("includes/header.php");
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-3 mt-sm-2">
-				<div class="home-card bg-light text-dark shadow-sm">
+				<div class="home-card bg-dark text-light shadow-sm">
 					<div class="d-flex flex-column">
 						<span class="card-title">Number of Late Returns</span>
 						<span class="card-text mt-1">25</span>

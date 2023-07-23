@@ -6,7 +6,7 @@ $this->session->set_userdata('reffered_from', current_url());
 <main>
 	<!-- Cards -->
 	<div class="container pt-5">
-
+		<h3 class="mb-4">Books</h3>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
